@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #060817;
+}
+header{
+    background: #191E3A;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0, .3);   
+}
+
+ul li{
+    list-style: none;
+    text-align: center;
+    display: block;
+}
+ul li a{
+    text-decoration: none;
+    padding: 0 20px;
+    display: block;
+    color: #fff;
+}
+ul li a .icon{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+}
