@@ -1,28 +1,83 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --bg: #060818;
+    --nav-bg: #191E3A;
+    --text: #BFC9D4;
+}
+*{ 
     margin: 0;
     padding: 0;
-    background: #060817;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif ;
 }
-header{
-    background: #191E3A;
+body{
+    background: var(--bg);
+}
+.wrapper{
+    position: absolute;
+    top: 5.3%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+.wrapper .navbar{
+    width: 1300px;
+    height: 40px;
+    background: var(--nav-bg);
     display: flex;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0, .3);   
+    justify-content: space-between;
+    padding: 10px 25px;
+    border-radius: 5px;
+    
+}
+.wrapper .navbar a{
+    color: var(--text);
+    margin-left: 50%;
+   
+}
+.wrapper .navbar .right ul{
+    display: flex;
+    align-items: center;
+   
+}
+.wrapper .navbar .right ul li{
+    margin: 0 10px;
+    text-align: right;
+    font-size: 24px;
+
 }
 
-ul li{
-    list-style: none;
-    text-align: center;
-    display: block;
-}
-ul li a{
-    text-decoration: none;
-    padding: 0 20px;
-    display: block;
-    color: #fff;
-}
-ul li a .icon{
-    font-size: 20px;
+.right{
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
+.wrapper .navbar .right ul li .dropdown{
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: none;
+  }
+  .ion-icon{
+    margin-right: 10px;
+  }
+  
+  .wrapper .navbar .right ul li .dropdown:before{
+    content: " ";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+  .wrapper .navbar .right ul li .active .dropdown{
+    display: block;
+  }
+
+  .dNone{
+      display: none;
+  }
