@@ -59,6 +59,7 @@ a:hover{
     color: var(--second-color-dark);
     border-radius: 8px;
     transition: 0.8s;
+    z-index: 100;
 }
 
 .sideBar:hover {
