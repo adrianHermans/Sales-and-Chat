@@ -1,0 +1,107 @@
+:root{
+    --background-color-dark: #060818;
+    --bar-color-dark: #191E3A;
+    --top-side-bar-dark: #1B2E4B;
+    --chart-dark: #0E1726;
+    --main-color-dark: #fff;
+    --second-color-dark: #6C728C;
+    --sideBar-hover: #61B6CD;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: var(--background-color-dark);
+}
+
+a{
+    color: var(--second-color-dark);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--sideBar-hover);
+}
+  
+/* INICIO SIDE BAR */
+.listSideBar{
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listSideBar li{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.sideBar{
+    position: fixed;
+    background-color: var(--top-side-bar-dark);
+    height: 100vh;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
+    margin: 0.8rem 0.8rem 0 0.8rem;
+    color: var(--second-color-dark);
+    border-radius: 8px;
+    transition: 0.8s;
+    z-index: 100;
+}
+
+.sideBar:hover {
+    width: 15rem;
+}
+
+.sideBar:hover .topLogoSideBar{
+    justify-content: flex-start;
+    width: 15rem;
+}
+
+.topLogoSideBar{
+    background-color: var(--top-side-bar-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color-dark);
+    font-size: 20px;
+    font-weight: 500px;
+}
+.textLogoSideBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#imgLogo{
+    width: 3rem;
+    height: fit-content;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.sideBarContent{
+    background-color: var(--bar-color-dark);
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.textSideBar{
+    margin-left: 2rem;
+}
+/* FIM SIDE BAR */
