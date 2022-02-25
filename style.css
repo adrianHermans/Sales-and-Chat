@@ -25,9 +25,10 @@ body{
     transform: translate(-50%, -50%);
 }
 .wrapper .navbar{
-    width: 1350px;
+    width: 84.37rem;
     background: var(--nav-bg);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 10px 25px;
     border-radius: 6px;
@@ -39,20 +40,23 @@ body{
 .wrapper .navbar .nav-right ul li a{
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 2.5rem;
+    
   }
   .wrapper .navbar .nav-right img{
     margin: 0 10px;
   }
   .wrapper .navbar .nav-right a{
     text-align: right;
+    
   }
   .wrapper .navbar .nav-right ul li{
     position: relative;
+    
   }
   .wrapper .navbar .nav-right ul li .dropdown{
     position: absolute;
-    top: 65px;
+    top: 4rem;
     right: 0;
     background: var(--nav-bg);
     padding: 10px 25px;
@@ -67,7 +71,7 @@ body{
   .wrapper .navbar .nav-right ul li .dropdown:before{
     content: "";
     position: absolute;
-    top: -20px;
+    top: -1.25rem;
     left: 50%;
     transform: translateX(-50%);
     border: 10px solid;  
@@ -78,11 +82,17 @@ body{
   display: block;
 }
 
-  #base{
+  .base{
       display: flex;
       flex-direction: row;
+      
   }
-  #languages{
+  .languages{
       display: flex;
       flex-direction: column;
+
+  }
+  .nav-right ion-icon{
+    height: 1.5rem;
+    width: 1.5rem;
   }
