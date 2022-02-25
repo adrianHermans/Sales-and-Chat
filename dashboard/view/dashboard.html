@@ -2,52 +2,126 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/ad0a023259.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nunito:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <title>Sales Admin</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ad0a023259.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nunito:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/sideBar.css">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Sales Admin</title>
 </head>
 
 <body>
-    <!-- INICIO NAV BAR -->
-    
-    <!-- FIM NAV BAR -->
-    <!-- INICIO SIDE BAR -->
-    <div class="sideBar">
-        <div class="topLogoSideBar">
-            <img src="../../images/logo-sidebar.png" alt="logo-side-bar" id="imgLogo">
-            <span class="textLogoSideBar">
-                LAMBO
-            </span>
+  <!-- INICIO NAV BAR -->
+  <div class="navBar">
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="nav-right">
+          <ul class="base">
+            <li>
+              <a href="#">
+                <img src="../../img/canada.png" alt="Admin" width="20" height="20">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+              <div class="dropdown">
+                <ul class="languages">
+                  <li><a href="#"><img src="../../img/german.png" alt="Admin" width="20" height="20"> German</a></li>
+                  <li><a href="#"><img src="../../img/jp.png" alt="Admin" width="20" height="20">Japanese</a></li>
+                  <li><a href="#"><img src="../../img/fr.png" alt="Admin" width="20" height="20">French</a></li>
+                  <li><a href="#"><img src="../../img/canada.png" alt="Admin" width="20" height="20">English</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon name="mail-outline"></ion-icon>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+              <div class="dropdown">
+                <ul class="languages">
+                  <li><a href="#"> </a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+            <li>
+              <a href="#">
+                <ion-icon name="notifications-outline"></ion-icon>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+              <div class="dropdown">
+                <ul class="languages">
+                  <li><a href="#"> </a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+            <li>
+              <a href="#">
+                <ion-icon name="person-outline"></ion-icon>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+              <div class="dropdown">
+                <ul class="languages">
+                  <li><a href="#">
+                      <ion-icon name="person-outline"></ion-icon>Profile
+                    </a></li>
+                  <li><a href="#">
+                      <ion-icon name="file-tray-outline"></ion-icon>Inbox
+                    </a></li>
+                  <li><a href="#">
+                      <ion-icon name="log-out-outline"></ion-icon>Log Out
+                    </a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="sideBarContent">
-            <ul class="listSideBar">
-                <li>
-                    <a href="dashboard.html">
-                        <ion-icon name="bar-chart-outline"></ion-icon>
-                        <span class="textSideBar">
-                            Dashboard
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../../index.html">
-                        <ion-icon name="chatbox-outline"></ion-icon>
-                        <span class="textSideBar">
-                            Chat
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+      </div>
     </div>
-    <!-- FIM SIDE BAR -->
+  </div>
+  <!-- FIM NAV BAR -->
+  <!-- INICIO SIDE BAR -->
+  <div class="sideBar">
+    <div class="topLogoSideBar">
+      <img src="../../images/logo-sidebar.png" alt="logo-side-bar" id="imgLogo">
+      <span class="textLogoSideBar">
+        LAMBO
+      </span>
+    </div>
+    <div class="sideBarContent">
+      <ul class="listSideBar">
+        <li>
+          <a href="dashboard.html">
+            <ion-icon name="bar-chart-outline"></ion-icon>
+            <span class="textSideBar">
+              Dashboard
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="../../index.html">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span class="textSideBar">
+              Chat
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- FIM SIDE BAR -->
+  <!-- INICIO PAGE CONTENT -->
+  <div class="pageContent">
 
+  </div>
+  <!-- FIM PAGE CONTENT -->
 </body>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
