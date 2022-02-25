@@ -4,6 +4,7 @@
     --bg: #060818;
     --nav-bg: #191E3A;
     --text: #BFC9D4;
+    --dropdowns:#1B2E4B;
 }
 
 *{
@@ -19,13 +20,13 @@ body{
   background: var(--bg);
 }
 .wrapper{
-    position: absolute;
+    position: fixed;
     top: 5.3%;
-    left: 52%;
+    left: 52.5%;
     transform: translate(-50%, -50%);
 }
 .wrapper .navbar{
-    width: 84.40rem;
+    width: 93vw;
     background: var(--nav-bg);
     display: flex;
     align-items: center;
@@ -83,6 +84,7 @@ body{
  
 .wrapper .navbar .nav-right ul li.active .dropdown{
   display: block;
+  background:var(--dropdowns);
 }
 
   .base{

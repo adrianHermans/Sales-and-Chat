@@ -55,7 +55,7 @@ a:hover{
     justify-content: flex-start;
     align-items: flex-start;
     overflow-x: hidden;
-    margin: 0.8rem 0.8rem 0 0.8rem;
+    margin: 0.6rem 0.8rem 0 0.8rem;
     color: var(--second-color-dark);
     border-radius: 8px;
     transition: 0.8s;
@@ -79,6 +79,7 @@ a:hover{
     color: var(--main-color-dark);
     font-size: 20px;
     font-weight: 500px;
+    height: 3.7rem;
 }
 .textLogoSideBar{
     display: flex;
