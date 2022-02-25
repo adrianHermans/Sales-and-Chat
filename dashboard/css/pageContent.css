@@ -1,0 +1,16 @@
+:root{
+    --background-color-dark: #060818;
+    --bar-color-dark: #191E3A;
+    --top-side-bar-dark: #1B2E4B;
+    --chart-dark: #0E1726;
+    --main-color-dark: #fff;
+    --second-color-dark: #6C728C;
+    --sideBar-hover: #61B6CD;
+}
+
+.pageContent{
+    /* background-color: red; */
+    width: 9rem;
+    height: 10rem;
+    margin-left: 2rem;
+}
