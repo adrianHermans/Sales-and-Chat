@@ -36,7 +36,9 @@ body{
 .wrapper .navbar ul li a{
     color: var(--text);
   }
-  
+  .nav-right{
+    margin-left: auto;
+  }
 .wrapper .navbar .nav-right ul li a{
     display: flex;
     align-items: center;
@@ -95,4 +97,13 @@ body{
   .nav-right ion-icon{
     height: 1.5rem;
     width: 1.5rem;
+    padding: 5px;
+  }
+  .nav-right .arrow{
+    display: flex;
+    align-self: flex-end;
+    width: 12px;
+    height: 12px;
+
+    
   }

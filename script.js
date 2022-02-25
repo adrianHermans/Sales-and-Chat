@@ -1,4 +1,6 @@
-   document.querySelector(".nav-right ul li").addEventListener("click", function(){
-    this.classList.toggle("active");
-  });
-  
+
+  document.querySelectorAll(".drop").forEach(el=>{
+    el.addEventListener("click", function(){
+        this.classList.toggle("active");
+      });
+  })
