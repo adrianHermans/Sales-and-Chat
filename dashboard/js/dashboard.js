@@ -63,7 +63,9 @@ var fields = {
     ]
 }
 
-$(document).ready(() => {});
+$(document).ready(() => {
+    setBanners()
+});
 
 function setBanners() {
     fields["banners"].forEach( element =>{

@@ -9,8 +9,23 @@
 }
 
 .pageContent{
-    background-color: red;
     width: 9rem;
     height: 10rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    position: fixed;
+    z-index: 1;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.banner{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background-color: var(--chart-dark);
+    width: 9rem;
+    height: 10rem;
 }
