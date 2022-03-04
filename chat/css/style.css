@@ -65,7 +65,7 @@ body{
   .wrapper .navbar .nav-right ul li .dropdown{
     position: absolute;
     top: 3rem;
-    right: 0;
+    right: -10px;
     background: var(--nav-bg);
     padding: 10px 10px;
     border-radius: 5px;
@@ -112,18 +112,22 @@ body{
     width: 0.75rem;
     height: 0.75rem;
   }
-  /* #notify{
-    font-size: 16px;
-  } */
   .dropdown #notify{
     width: 15rem;
     height: 12rem;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 8px;
+    margin-bottom: 0;
+    color: var(--text);
   }
   .dropdown #mail{
     width: 13rem;
     height: 11.5rem;
   }
-  
+  .dropdown #profile{
+    padding-left: 1px;
+  }
   @media only screen and (max-height: 639px){
    .wrapper{
      position: fixed;
@@ -135,7 +139,7 @@ body{
   }
   @media only screen and (max-width: 1349px){
     .wrapper .navbar{
-      transition: width 0.5s;
+      transition: width 0.1s;
       width: 85vw;
      
     }
