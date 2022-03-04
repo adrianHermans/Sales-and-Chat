@@ -56,3 +56,17 @@
 .bannerTitle{
     margin: 1.1rem;
 }
+
+body::-webkit-scrollbar {
+    width: 10px;           
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--top-side-bar-dark);       
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--second-color-dark);   
+    border-radius: 20px;       
+    border: 2px solid var(--top-side-bar-dark);  
+  }
