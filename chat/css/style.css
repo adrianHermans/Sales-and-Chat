@@ -127,8 +127,16 @@ body{
     color: var(--text);
   }
   .dropdown #mail{
-    width: 13rem;
+    width: 12rem;
     height: 11.5rem;
+  }
+  .dropdown #mail li{
+    padding-top: 0.5rem;
+    margin-bottom: 10px;
+    
+  }
+  .dropdown #mail p{
+    font-size: 10px;
   }
   .dropdown #profile{
     padding-left: 1px;
@@ -137,8 +145,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-color: var(--avatar);
     color: var(--text);
     font-weight: 600;
