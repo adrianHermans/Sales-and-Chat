@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
     --bg: #060818;
     --nav-bg: #191E3A;
     --text: #BFC9D4;
+    --dropdowns: #1B2E4B;
 }
 
 * {
@@ -17,25 +20,43 @@ body {
     background: var(--bg);
 }
 
+.navInvisible{
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--bg);
+}
+
 .wrapper {
-    position: absolute;
-    top: 5.3%;
-    left: 52%;
+    position: fixed;
+    z-index: 99;
+    top: 2.1rem;
+    left: 52.5%;
     transform: translate(-50%, -50%);
 }
 
 .wrapper .navbar {
-    width: 84.37rem;
+    width: 93vw;
     background: var(--nav-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 10px 15px;
     border-radius: 6px;
+    margin-top: 12px;
+
 }
 
 .wrapper .navbar ul li a {
     color: var(--text);
+    padding-left: 10px;
+}
+
+.nav-right {
+    margin-left: auto;
 }
 
 .wrapper .navbar .nav-right ul li a {
@@ -46,7 +67,7 @@ body {
 }
 
 .wrapper .navbar .nav-right img {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .wrapper .navbar .nav-right a {
@@ -61,31 +82,22 @@ body {
 
 .wrapper .navbar .nav-right ul li .dropdown {
     position: absolute;
-    top: 4rem;
+    top: 3rem;
     right: 0;
     background: var(--nav-bg);
-    padding: 10px 25px;
+    padding: 10px 10px;
     border-radius: 5px;
     display: none;
-
+    font-size: 15px;
 }
 
 .wrapper .navbar .nav-right ul li .dropdown ion-icon {
     margin-right: 10px;
 }
 
-.wrapper .navbar .nav-right ul li .dropdown:before {
-    content: "";
-    position: absolute;
-    top: -1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 10px solid;
-    border-color: transparent transparent var(--text) transparent;
-}
-
 .wrapper .navbar .nav-right ul li.active .dropdown {
     display: block;
+    background: var(--dropdowns);
 }
 
 .base {
@@ -139,6 +151,7 @@ body {
 @media only screen and (max-width: 1349px) {
     .wrapper .navbar {
         transition: width 0.5s;
-        width: 92vw;
+        width: 85vw;
+
     }
 }
