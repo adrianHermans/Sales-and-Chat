@@ -1,4 +1,4 @@
-:root{
+:root {
     --background-color-dark: #060818;
     --bar-color-dark: #191E3A;
     --top-side-bar-dark: #1B2E4B;
@@ -8,41 +8,46 @@
     --sideBar-hover: #61B6CD;
 }
 
-.pageContent{
+.pageContent {
     margin-left: 5rem;
     margin-top: 6rem;
     position: absolute;
     z-index: 1;
     width: 93vw;
-    /* background-color: red; */
 }
 
-.row{
+.row {
     display: flex;
     flex-direction: row;
 }
 
-.banner{
+.banner {
     margin-bottom: 1rem;
     margin-left: 1rem;
     background-color: var(--chart-dark);
     border-radius: 10px;
     color: var(--main-color-dark);
+    display: flex;
+    flex: 1;
 }
 
-.firstRow{
+.firstRow {
     height: 25rem;
-    flex: 1;
 }
-.secondRow{
-    height: 25rem;
-    flex: 1;
+
+.secondRow {
+    height: 20rem;
 }
-.thirdRow{
-    height: 25rem;
-    flex: 1;
+
+.thirdRow {
+    height: 30rem;
 }
-.fourthRow{
-    height: 25rem;
-    flex: 1;
+
+.fourthRow {
+    height: 30rem;
+}
+
+.banner1 {
+    display: flex;
+    flex: 2;
 }
