@@ -184,6 +184,13 @@ body {
 
 
 /* Media Queries For Responsivness*/
+
+@media only screen and (max-height: 750px){
+    .navInvisible{
+        height: 12vh;
+    }
+}
+
 @media only screen and (max-height: 639px) {
     .wrapper {
         position: fixed;
@@ -191,6 +198,10 @@ body {
         margin-left: 0;
         margin-top: 0;
 
+    }
+
+    .navInvisible{
+        height: 13vh;
     }
 }
 

@@ -75,6 +75,7 @@ var fields = {
 
 $(document).ready(() => {
     setBanners()
+    setCharts()
 });
 
 function setBanners() {
@@ -83,7 +84,7 @@ function setBanners() {
             let banner = `
             <div class="${element.idBanner} banner">
                 <div class="bannerTitle">${element.name}</div>
-                <div class="${element.idChart}"></div>
+                <div class="${element.idChart} charts"></div>
             </div>`;
             $(".firstRow").append(banner)
         }
@@ -91,7 +92,7 @@ function setBanners() {
             let banner = `
             <div class="${element.idBanner} banner">
                 ${element.hasTitle ? `<div class="bannerTitle">${element.name}</div>` : ``}
-                <div class="${element.idChart}"></div>
+                <div class="${element.idChart} charts"></div>
             </div>`;
             $(".secondRow").append(banner)
         }
@@ -99,7 +100,7 @@ function setBanners() {
             let banner = `
             <div class="${element.idBanner} banner">
                 <div class="bannerTitle">${element.name}</div>
-                <div class="${element.idChart}"></div>
+                <div class="${element.idChart} charts"></div>
             </div>`;
             $(".thirdRow").append(banner)
         }
@@ -107,7 +108,7 @@ function setBanners() {
             let banner = `
             <div class="${element.idBanner} banner">
                 <div class="bannerTitle">${element.name}</div>
-                <div class="${element.idChart}"></div>
+                <div class="${element.idChart}" charts></div>
             </div>`;
             $(".fourthRow").append(banner)
         }

@@ -29,6 +29,7 @@
     color: var(--main-color-dark);
     font-size: 20px;
     display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
@@ -50,23 +51,24 @@
 
 .banner1 {
     display: flex;
-    flex: 2.05;
+    flex: 2.07;
 }
 
-.bannerTitle{
+.bannerTitle {
+    height: fit-content;
     margin: 1.1rem;
 }
 
 body::-webkit-scrollbar {
-    width: 10px;           
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: var(--top-side-bar-dark);       
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--second-color-dark);   
-    border-radius: 20px;       
-    border: 2px solid var(--top-side-bar-dark);  
-  }
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--top-side-bar-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--second-color-dark);
+    border-radius: 20px;
+    border: 2px solid var(--top-side-bar-dark);
+}
