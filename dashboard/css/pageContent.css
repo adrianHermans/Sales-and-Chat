@@ -10,7 +10,7 @@
 
 .pageContent {
     margin-left: 5rem;
-    margin-top: 6rem;
+    margin-top: 5rem;
     position: absolute;
     z-index: 1;
     width: 93vw;
@@ -22,11 +22,12 @@
 }
 
 .banner {
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+    /* margin-bottom: 1rem; */
+    margin: 1rem 1rem;
     background-color: var(--chart-dark);
     border-radius: 10px;
     color: var(--main-color-dark);
+    font-size: 20px;
     display: flex;
     flex: 1;
 }
@@ -49,5 +50,9 @@
 
 .banner1 {
     display: flex;
-    flex: 2;
+    flex: 2.05;
+}
+
+.bannerTitle{
+    margin: 1.1rem;
 }
