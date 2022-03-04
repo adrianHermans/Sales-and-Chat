@@ -5,6 +5,7 @@
     --nav-bg: #191E3A;
     --text: #BFC9D4;
     --dropdowns:#1B2E4B;
+    --avatar: #304aca;
 }
 
 *{
@@ -28,15 +29,15 @@ body{
    
 }
 .wrapper .navbar{
-    width: 93vw;
+    width: 92vw;
     background: var(--nav-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 0.55rem;
     border-radius: 6px;
-    margin-top: 12px;
-    
+    margin-top: 0.8rem;
+    margin-left: 10px;
 }
 .wrapper .navbar ul li a{
     color: var(--text);
@@ -49,7 +50,8 @@ body{
     display: flex;
     align-items: center;
     height: 2.5rem;
-    
+    padding: 0.3rem; 
+    margin-left: 10px;
   }
   .wrapper .navbar .nav-right img{
     margin: 0 5px;
@@ -67,10 +69,10 @@ body{
     top: 3rem;
     right: -10px;
     background: var(--nav-bg);
-    padding: 10px 10px;
+    padding: 2px 8px;
     border-radius: 5px;
     display: none;
-   font-size: 15px;
+    font-size: 15px;
   }
   .wrapper .navbar .nav-right ul li .dropdown ion-icon{
     margin-right: 10px;
@@ -102,9 +104,12 @@ body{
 
   }
   .nav-right ion-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-    padding: 5px;
+    
   }
   .nav-right .arrow{
     display: none;
@@ -128,6 +133,27 @@ body{
   .dropdown #profile{
     padding-left: 1px;
   }
+  .dropdown #mail .avatar-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--avatar);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 14px;
+    
+  }
+  .rounded-circle{
+    border-radius: 50%;
+  }
+  ::after, ::before {
+    box-sizing: border-box;
+  }
+
+
+  /* Media Queries For Responsivness*/
   @media only screen and (max-height: 639px){
    .wrapper{
      position: fixed;
@@ -140,8 +166,8 @@ body{
   @media only screen and (max-width: 1349px){
     .wrapper .navbar{
       transition: width 0.1s;
-      width: 85vw;
-     
+      width: 90vw;
+      margin-left: 15px;
     }
   }
   
