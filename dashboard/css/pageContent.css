@@ -9,12 +9,12 @@
 }
 
 .pageContent{
-    width: 9rem;
-    height: 10rem;
     margin-left: 5rem;
-    margin-top: 5rem;
-    position: fixed;
+    margin-top: 6rem;
+    position: absolute;
     z-index: 1;
+    width: 93vw;
+    /* background-color: red; */
 }
 
 .row{
@@ -26,6 +26,23 @@
     margin-bottom: 1rem;
     margin-left: 1rem;
     background-color: var(--chart-dark);
-    width: 9rem;
-    height: 10rem;
+    border-radius: 10px;
+    color: var(--main-color-dark);
+}
+
+.firstRow{
+    height: 25rem;
+    flex: 1;
+}
+.secondRow{
+    height: 25rem;
+    flex: 1;
+}
+.thirdRow{
+    height: 25rem;
+    flex: 1;
+}
+.fourthRow{
+    height: 25rem;
+    flex: 1;
 }
