@@ -103,6 +103,10 @@ body {
   background: var(--dropdowns);
 }
 
+.active{
+  display: block;
+}
+
 .base {
   display: flex;
   flex-direction: row;

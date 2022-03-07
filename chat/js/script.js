@@ -1,22 +1,32 @@
-//  document.querySelectorAll(".drop").forEach(el => {
-//    el.addEventListener("click", function () {
-//      this.classList.addClass("active");
-//    });
-//  })
-function openDropdown(){
-  $('.drop').click(element=>{
-    console.log(element)
-    element.toggleClass('active')
-  
+ document.querySelectorAll(".drop").forEach(el => {
+   el.addEventListener("click", function () {
+     this.classList.addClass("active");
+   });
  })
 
- $(window).click(function(el) {
-  $('.drop').removeClass('active')
-  
-});
 
-}
- 
+//  function openDropdown(){
+//    $('.toggle-trigger').click(element=>{
+//      console.log(element);
+//      $('.li.drop.toggle-trigger').closest('.toggle-wrap').find('.toggle-area').toggleClass('active')
+//   })
+
+
+//  // //  $(window).click(function(el) {
+//  // //   $('.drop').removeClass('active')
+//  // // });
+//  }
+
+
+ //  function toggle(){
+ //    $('.drop').click(function(e){
+ //      alert('aaaaa')
+ //      e.preventDefault();
+ //      $(this).closest('.wrapper').find('.dropdown').slideToggle();
+ //    })
+ //  }
+
+
  var fields = {
    'email': [{
        'logo': 'KY',
@@ -51,7 +61,7 @@ function openDropdown(){
 
  }
 
- 
+
  function emailNotification() {
    fields['email'].forEach(element => {
      let html = ` <li><a href="#">
@@ -67,7 +77,7 @@ function openDropdown(){
 
 
  function bellNotification() {
-   fields['notification'].forEach( element => {
+   fields['notification'].forEach(element => {
      let noti = `<li><a href="#">
      <div class='notify-lane'>
       <h6>${element.cond}</h6>
@@ -77,19 +87,12 @@ function openDropdown(){
      $('#notify').append(noti)
    })
  }
- 
- function toggle(){
-   $('.toggle-trigger').click(function(e){
-     e.preventDefault();
-     $(this).closest('.toggle-wrap').find('.toggle-area').slideToggle();
-   })
- }
+
 
 
  $(document).ready(() => {
    emailNotification()
    bellNotification()
-   openDropdown()
-   toggle()
+    openDropdown()
+   //  toggle()
  });
-
