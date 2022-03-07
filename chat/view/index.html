@@ -8,24 +8,24 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../../dashboard/css/sideBar.css">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  
+
 
 
   <title>Chat Application</title>
 </head>
 
 <body>
- <!--NavBar-->
-  <div class="wrapper">
+  <!--NavBar-->
+  <div class="wrapper toggle-wrap">
     <div class="navbar">
       <div class="nav-right">
         <ul class="base">
-          <li class="drop">
+          <li class="drop toggle-trigger">
             <a href="#">
               <img src="../../img/ca.png" alt="Admin" width="20" height="20">
               <ion-icon class="arrow" name="chevron-down-outline"></ion-icon>
             </a>
-            <div class="dropdown">
+            <div class="dropdown toggle-area">
               <ul class="languages">
                 <li><a href="#"><img src="../../img/ge.png" alt="Admin" width="20" height="20"> German</a></li>
                 <li><a href="#"><img src="../../img/jp.png" alt="Admin" width="20" height="20">Japanese</a></li>
@@ -36,12 +36,12 @@
 
 
           </li>
-          <li class="drop">
+          <li class="drop toggle-trigger">
             <a href="#">
               <ion-icon name="mail-outline"></ion-icon>
               <ion-icon class="arrow" name="chevron-down-outline"></ion-icon>
             </a>
-            <div class="dropdown">
+            <div class="dropdown toggle-area">
               <ul id="mail">
                 <!-- <li><a href="#">
                   <span class="avatar-title rounded-circle">KY</span>
@@ -61,12 +61,12 @@
               </ul>
             </div>
           </li>
-          <li class="drop">
+          <li class="drop toggle-trigger">
             <a href="#">
               <ion-icon name="notifications-outline"></ion-icon>
               <ion-icon class="arrow" name="chevron-down-outline"></ion-icon>
             </a>
-            <div class="dropdown">
+            <div class="dropdown toggle-area">
               <ul id="notify">
                 <!-- <li><a href="#">
                   <h6>Server Rebooted</h6>
@@ -80,16 +80,16 @@
                   <h6>Kelly Portfolio.pdf</h6>
                   <p>670 kb</p>
                 </a></li> -->
-                
+
               </ul>
             </div>
           </li>
-          <li class="drop">
+          <li class="drop toggle-trigger">
             <a href="#">
               <ion-icon name="person-outline"></ion-icon>
               <ion-icon class="arrow" name="chevron-down-outline"></ion-icon>
             </a>
-            <div class="dropdown">
+            <div class="dropdown toggle-area">
               <ul id="profile">
                 <li><a href="#">
                     <ion-icon name="person-outline"></ion-icon>Profile
@@ -138,8 +138,9 @@
       </ul>
     </div>
   </div>
- <!--Fim da SideBar-->
+  <!--Fim da SideBar-->
 </body>
-  <script src="../../jquery.min.js"></script>
-  <script src="../js/script.js"></script>
+<script src="../../jquery.min.js"></script>
+<script src="../js/script.js"></script>
+
 </html>

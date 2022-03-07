@@ -1,27 +1,22 @@
- document.querySelectorAll(".drop").forEach(el => {
-   el.addEventListener("click", function () {
-     this.classList.toggle("active");
-   });
+//  document.querySelectorAll(".drop").forEach(el => {
+//    el.addEventListener("click", function () {
+//      this.classList.addClass("active");
+//    });
+//  })
+function openDropdown(){
+  $('.drop').click(element=>{
+    console.log(element)
+    element.toggleClass('active')
+  
  })
- // $('.languages').find('option:first').attr('selected', 'selected');
- // $('.languages').val(0);
- // $('.languages option:eq(0)').attr('selected','selected');
- // $('.languages').get(0).selectedIndex = 0;
 
+ $(window).click(function(el) {
+  $('.drop').removeClass('active')
+  
+});
 
- //   $(document).ready(function(){
- //     // Show hide popover
- //     $(".dropdown").click(function(){
- //         $(this).find(".drop").slideToggle("fast");
- //     });
- // });
- // $(document).on("click", function(event){
- //     var $trigger = $(".dropdown");
- //     if($trigger !== event.target && !$trigger.has(event.target).length){
- //         $(".drop").slideUp("fast");
- //     }            
- // });
-
+}
+ 
  var fields = {
    'email': [{
        'logo': 'KY',
@@ -61,8 +56,10 @@
    fields['email'].forEach(element => {
      let html = ` <li><a href="#">
     <span class="avatar-title rounded-circle">${element.logo}</span>
+    <div class='mail-lane'>
     <h6>${element.name}</h6>
     <p>${element.status}</p>
+    </div>
     </a></li>`
      $('#mail').append(html)
    })
@@ -72,15 +69,27 @@
  function bellNotification() {
    fields['notification'].forEach( element => {
      let noti = `<li><a href="#">
+     <div class='notify-lane'>
       <h6>${element.cond}</h6>
       <p>${element.numb}</p>
+      </div>
       </a></li>`
      $('#notify').append(noti)
    })
  }
  
+ function toggle(){
+   $('.toggle-trigger').click(function(e){
+     e.preventDefault();
+     $(this).closest('.toggle-wrap').find('.toggle-area').slideToggle();
+   })
+ }
+
+
  $(document).ready(() => {
    emailNotification()
    bellNotification()
-
+   openDropdown()
+   toggle()
  });
+
