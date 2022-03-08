@@ -1,4 +1,14 @@
-.charts{
+:root {
+    --background-tooltip-dark: #191E3A;
+    --letter-tooltip: #f3f3f3;
+}
+
+.charts {
     height: 100%;
     max-width: 100%;
+}
+
+.apexcharts-tooltip {
+    background-color: var(--background-tooltip-dark);
+    color: var(--letter-tooltip);
 }
