@@ -1,3 +1,9 @@
+var colorsChartDark = {
+    'letterChartDark':'#BFC9D4',
+    'gridChartDark':'#181E37',
+    'axisChartDark':'#6A7D8B'
+}
+
 function setCharts() {
     var options1 = {
         colors: ['#2196F3', '#E7515A'],
@@ -20,7 +26,14 @@ function setCharts() {
             enabled: false
         },
         stroke: {
-            curve: 'smooth'
+            curve: 'smooth',
+            width: 2
+        },
+        tooltip:{
+            x:{
+                show:false
+            },
+            theme:false
         },
         xaxis: {
             lines: {
@@ -33,7 +46,18 @@ function setCharts() {
                 show: false
             },
             type: 'datetime',
-            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
+            axisTicks:{
+                show:false
+            },
+            labels:{
+                style:{
+                    colors: colorsChartDark.letterChartDark
+                }
+            },
+            tooltip:{
+                theme:'dark'
+            }
         },
         yaxis: {
             lines: {
@@ -44,26 +68,39 @@ function setCharts() {
             },
             crosshairs: {
                 show: true
+            },
+            labels:{
+                style:{
+                    colors: colorsChartDark.letterChartDark
+                }
             }
         },
         grid: {
-            borderColor: '#fff',
-            strokeDashArray: 7,
+            borderColor: colorsChartDark.gridChartDark,
+            strokeDashArray: 4,
             show: true,
             xaxis: {
                 lines: {
-                    show: false
+                    show: true
                 }
             },
             yaxis: {
                 lines: {
-                    show: true
+                    show: false
                 }
             }
         },
         legend: {
             position: 'top',
-            horizontalAlign: 'right'
+            horizontalAlign: 'right',
+            fontSize: '16px',
+            labels:{
+                colors: colorsChartDark.letterChartDark
+            }
+        },
+        fill: {
+            type:'solid',
+            opacity: 0.05
         }
     }
 

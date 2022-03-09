@@ -7,20 +7,30 @@
 
 function openDropdown() {
   $('.toggle-trigger').click((element) => {
+
     $(element.currentTarget).toggleClass('active')
+
+    $(element.currentTarget).toggleClass('active').focus();
   })
 
   //    $('.toggle-trigger').click(element=>{
   //      $('.li.drop.toggle-trigger').closest('.toggle-wrap').find('.toggle-area').toggleClass('active')
   //   })
+
   $(window).click(el => {
+
+  $('.toggle-trigger').on('focusout', function(){
+
     var $target = $(el.target)
-    if(!$target.closest('.toggle-trigger').length && $('.toggle-trigger').hasClass('active')){
-      $('.toggle-trigger').removeClass('active')
-    }
+    $(this).removeClass('active')
+  })
+  // $(window).click(el => {
+  //   if(!$target.closest('.toggle-trigger').length && $('.toggle-trigger').hasClass('active')){
+  //     $('.toggle-trigger').removeClass('active')
+  //   }
     // $(el).closest('body').find('.wrapper').find('.active').removeClass('active')
 
-  });
+  // });
 }
 
 
