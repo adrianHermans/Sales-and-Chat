@@ -63,7 +63,7 @@ body {
 }
 
 .wrapper .navbar .nav-right a {
-  text-align: right;
+  text-align: initial;
 
 }
 
@@ -141,30 +141,61 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .dropdown #notify h6 {
   font-size: 14px;
-
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-weight: normal;
+  
 }
-
+.dropdown #notify p{
+  font-size: 13px;
+  margin-left: 1rem;
+}
 .dropdown #notify .notify-lane {
   display: flex;
   flex-direction: column;
 }
+.dropdown #notify i{
+  font-size: 23px;
+}
+.dropdown #notify .fa-xmark{
+  font-size: 19px;
+  cursor: pointer;
+}
+.dropdown #notify .fa-xmark:hover{
+  color: red;
+}
+.dropdown #notify .fa-file-lines{
+  border-color: #e7515a;
+  color: #d6656f;
+  margin-left: 5px;
+}
+.dropdown #notify .fa-heart{
+  color: #e2a03f;
+}
+.dropdown #notify .fa-server{
+  color: #009688;
+}
+
 
 .dropdown #mail {
   width: 12rem;
   height: 11.5rem;
-
 }
-
 .dropdown #mail li {
   padding-top: 0.5rem;
   margin-bottom: 10px;
-
 }
-
+.dropdown #mail h6{
+  font-weight: 550;
+}
 .dropdown #profile {
   padding-left: 1px;
 }
