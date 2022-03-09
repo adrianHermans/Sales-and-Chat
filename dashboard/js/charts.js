@@ -1,7 +1,8 @@
 var colorsChartDark = {
-    'letterChartDark':'#BFC9D4',
-    'gridChartDark':'#181E37',
-    'axisChartDark':'#6A7D8B'
+    'letterChartDark': '#BFC9D4',
+    'gridChartDark': '#181E37',
+    'axisChartDark': '#6A7D8B',
+    'letterSubTitle':'#888EA8'
 }
 
 function setCharts() {
@@ -9,18 +10,30 @@ function setCharts() {
         colors: ['#2196F3', '#E7515A'],
         series: [{
             name: 'Income',
-            data: [31, 40, 28, 51, 42, 109, 100]
+            data: [16800, 16800, 15500, 17800, 15500, 17000, 19000, 16000, 15000, 17000, 14000, 17000]
         }, {
             name: 'Expenses',
-            data: [11, 32, 45, 32, 34, 52, 41]
+            data: [16500, 17500, 16200, 17300, 16000, 19500, 16000, 17000, 16000, 19000, 18000, 19000]
         }],
         chart: {
+            fontFamily: 'Nunito, sans-serif',
+            colors:colorsChartDark.letterChartDark,
             toolbar: {
                 show: false
             },
             type: 'area',
             height: '80%',
-            width: '100%'
+            width: '100%',
+            dropShadow: {
+                enabled: true,
+                opacity: 0.2,
+                blur: 10,
+                left: -7,
+                top: 22
+            },
+            zoom:{
+                enabled: false
+            }
         },
         dataLabels: {
             enabled: false
@@ -29,12 +42,39 @@ function setCharts() {
             curve: 'smooth',
             width: 2
         },
-        tooltip:{
-            x:{
-                show:false
+        tooltip: {
+            x: {
+                show: false
             },
-            theme:false
+            theme: 'dark',
+            marker: {
+                show: true
+            }
         },
+        subtitle: {
+            text: '$10,840',
+            align: 'left',
+            margin: 0,
+            offsetX: 110,
+            offsetY: 0,
+            floating: false,
+            style: {
+              fontSize: '18px',
+              color:  '#4361ee'
+            }
+          },
+          title: {
+            text: 'Total Profit',
+            align: 'left',
+            margin: 0,
+            offsetX: 10,
+            offsetY: 0,
+            floating: false,
+            style: {
+              fontSize: '18px',
+              color: colorsChartDark.letterSubTitle 
+            },
+          },
         xaxis: {
             lines: {
                 show: false
@@ -45,18 +85,16 @@ function setCharts() {
             axisBorder: {
                 show: false
             },
-            type: 'datetime',
-            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
-            axisTicks:{
-                show:false
+            axisTicks: {
+                show: false
             },
-            labels:{
-                style:{
+            labels: {
+                style: {
                     colors: colorsChartDark.letterChartDark
                 }
             },
-            tooltip:{
-                theme:'dark'
+            tooltip: {
+                theme: 'dark'
             }
         },
         yaxis: {
@@ -69,12 +107,16 @@ function setCharts() {
             crosshairs: {
                 show: true
             },
-            labels:{
-                style:{
+            labels: {
+                style: {
                     colors: colorsChartDark.letterChartDark
+                },
+                formatter: function (value) {
+                    return (value / 1000) + 'K'
                 }
             }
         },
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         grid: {
             borderColor: colorsChartDark.gridChartDark,
             strokeDashArray: 4,
@@ -93,15 +135,17 @@ function setCharts() {
         legend: {
             position: 'top',
             horizontalAlign: 'right',
+            offsetY: -90,
             fontSize: '16px',
-            labels:{
+            labels: {
                 colors: colorsChartDark.letterChartDark
             }
         },
         fill: {
-            type:'solid',
+            type: 'solid',
             opacity: 0.05
-        }
+        },
+        
     }
 
     var chart = new ApexCharts(document.querySelector(".chart1"), options1);
