@@ -79,7 +79,7 @@ $(document).ready(() => {
 });
 
 function setBanners() {
-    fields["banners"].forEach( element =>{
+    fields["banners"].forEach(element =>{
         if(element.lane == "first"){
             let banner = `
             <div class="${element.idBanner} banner">

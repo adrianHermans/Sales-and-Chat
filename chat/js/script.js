@@ -36,16 +36,14 @@ var fields = {
   ]
 }
 
-$(document).ready(() => {
-  openDropdown()
-  emailNotification()
-  bellNotification()
-});
+
 
 function openDropdown() {
   $('.toggle-trigger').click((element) => {
+    $('.drop').removeClass('active')
     console.log(element);
     $(element.currentTarget).closest('.wrapper').find(element.currentTarget).toggleClass('active').focus();
+    
   })
   $(window).click(el => {
     console.log(el);
@@ -54,7 +52,9 @@ function openDropdown() {
       $('.toggle-trigger').removeClass('active')
     }
   });
+
 }
+
 
 function emailNotification() {
   fields['email'].forEach(element => {
@@ -76,3 +76,12 @@ function bellNotification() {
     $('#notify').append(noti)
   })
 }
+
+
+
+$(document).ready(() => {
+  openDropdown()
+  emailNotification()
+  bellNotification()
+
+});
