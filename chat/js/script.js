@@ -1,47 +1,3 @@
-//  document.querySelectorAll(".drop").forEach(el => {
-//    el.addEventListener("click", function () {
-//      this.classList.addClass("active");
-//    });
-//  })
-
-
-function openDropdown() {
-  $('.toggle-trigger').click((element) => {
-
-    $(element.currentTarget).toggleClass('active')
-
-    $(element.currentTarget).toggleClass('active').focus();
-  })
-
-  //    $('.toggle-trigger').click(element=>{
-  //      $('.li.drop.toggle-trigger').closest('.toggle-wrap').find('.toggle-area').toggleClass('active')
-  //   })
-
-  $(window).click(el => {
-
-  $('.toggle-trigger').on('focusout', function(){
-
-    var $target = $(el.target)
-    $(this).removeClass('active')
-  })
-  // $(window).click(el => {
-  //   if(!$target.closest('.toggle-trigger').length && $('.toggle-trigger').hasClass('active')){
-  //     $('.toggle-trigger').removeClass('active')
-  //   }
-    // $(el).closest('body').find('.wrapper').find('.active').removeClass('active')
-
-  // });
-}
-
-
-//  function toggle(){
-//    $('.drop').click(function(e){
-//      e.preventDefault();
-//      $(this).closest('.wrapper').find('.dropdown').slideToggle();
-//    })
-//  }
-
-
 var fields = {
   'email': [{
       'logo': 'KY',
@@ -78,9 +34,27 @@ var fields = {
       'close': '"fa-solid fa-xmark"'
     }
   ]
-
 }
 
+$(document).ready(() => {
+  openDropdown()
+  emailNotification()
+  bellNotification()
+});
+
+function openDropdown() {
+  $('.toggle-trigger').click((element) => {
+    console.log(element);
+    $(element.currentTarget).closest('.wrapper').find(element.currentTarget).toggleClass('active').focus();
+  })
+  $(window).click(el => {
+    console.log(el);
+    var $target = $(el.target)
+    if(!$target.closest('.toggle-trigger').length && $('.toggle-trigger').hasClass('active')){
+      $('.toggle-trigger').removeClass('active')
+    }
+  });
+}
 
 function emailNotification() {
   fields['email'].forEach(element => {
@@ -95,37 +69,10 @@ function emailNotification() {
   })
 }
 
-
 function bellNotification() {
   fields['notification'].forEach(element => {
     let noti = `
-    
     `
     $('#notify').append(noti)
   })
 }
-
-
-
-// function bellNotification() {
-//   fields['notification'].forEach(element => {
-//     let noti = `<li><a href="#">
-//     <i class=${element.icon}></i>
-//      <div class='notify-lane'>
-//       <h6>${element.cond}</h6>
-//       <p>${element.numb}</p>
-//       </div>
-//       <i class=${element.close}></i>
-//       </a></li>`
-//     $('#notify').append(noti)
-//   })
-// }
-
-
-
-$(document).ready(() => {
-  openDropdown()
-  emailNotification()
-  bellNotification()
-
-});
