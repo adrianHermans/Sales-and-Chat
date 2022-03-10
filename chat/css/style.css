@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
+/* Base */
 :root {
   --bg: #060818;
   --nav-bg: #191E3A;
@@ -125,7 +125,7 @@ body {
   justify-content: center;
   height: 1.5rem;
   width: 1.5rem;
-
+  
 }
 
 .nav-right .arrow {
@@ -134,46 +134,20 @@ body {
   width: 0.75rem;
   height: 0.75rem;
 }
-
-.dropdown #notify {
+/* NOTIFY */
+.dropdown #notify{
   width: 15rem;
   height: 12rem;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--text);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
 }
-
-.dropdown #notify h6 {
-  font-size: 14px;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  font-weight: normal;
-  
-}
-.dropdown #notify p{
-  font-size: 13px;
-  margin-left: 1rem;
-}
-.dropdown #notify .notify-lane {
-  display: flex;
-  flex-direction: column;
-}
-.dropdown #notify i{
+.dropdown #notify .icons{
   font-size: 23px;
 }
-.dropdown #notify .fa-xmark{
-  font-size: 19px;
-  cursor: pointer;
-}
+
 .dropdown #notify .fa-xmark:hover{
-  color: red;
+  color: rgb(255, 52, 52);
 }
 .dropdown #notify .fa-file-lines{
-  border-color: #e7515a;
   color: #d6656f;
   margin-left: 5px;
 }
@@ -184,7 +158,7 @@ body {
   color: #009688;
 }
 
-
+/* MAIL */
 .dropdown #mail {
   width: 12rem;
   height: 11.5rem;

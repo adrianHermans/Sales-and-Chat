@@ -72,8 +72,18 @@ function emailNotification() {
 function bellNotification() {
   fields['notification'].forEach(element => {
     let noti = `
+      <div id='note'>
+        <a href="#">
+          <div class='icons'><i class=${element.icon}> </i></div>
+          <div>
+            <div> <h6>${element.cond}</h6> </div>
+            <div> <p>${element.numb}</p> </div>
+          </div>
+          <div><i class=${element.close}></i> </div>
+        </a>
+      </div>
     `
-    $('#notify').append(noti)
+    $('.notify-b').append(noti)
   })
 }
 
