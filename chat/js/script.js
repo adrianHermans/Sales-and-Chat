@@ -1,46 +1,3 @@
-//  document.querySelectorAll(".drop").forEach(el => {
-//    el.addEventListener("click", function () {
-//      this.classList.addClass("active");
-//    });
-//  })
-
-
-function openDropdown() {
-  $('.toggle-trigger').click((element) => {
-    // alert('click')
-    // console.log(element);
-    $(element.currentTarget).toggleClass('active').focus()
-    // console.log(element);
-  })
-
-  //    $('.toggle-trigger').click(element=>{
-  //      console.log(element);
-  //      $('.li.drop.toggle-trigger').closest('.toggle-wrap').find('.toggle-area').toggleClass('active')
-  //   })
-  $('.toggle-trigger').on('focusout', function(){
-    var $target = $(el.target)
-    $(this).removeClass('active')
-  })
-  // $(window).click(el => {
-  //   console.log(el);
-  //   if(!$target.closest('.toggle-trigger').length && $('.toggle-trigger').hasClass('active')){
-  //     $('.toggle-trigger').removeClass('active')
-  //   }
-    // $(el).closest('body').find('.wrapper').find('.active').removeClass('active')
-
-  // });
-}
-
-
-//  function toggle(){
-//    $('.drop').click(function(e){
-//      alert('aaaaa')
-//      e.preventDefault();
-//      $(this).closest('.wrapper').find('.dropdown').slideToggle();
-//    })
-//  }
-
-
 var fields = {
   'email': [{
       'logo': 'KY',
@@ -59,22 +16,45 @@ var fields = {
     }
   ],
   'notification': [{
+      'icon': '"fa-solid fa-server"',
       'cond': 'Server Rebooted',
-      'numb': '45 min ago'
+      'numb': '45 min ago',
+      'close': '"fa-solid fa-xmark"'
     },
     {
+      'icon': '"fa-solid fa-heart"',
       'cond': 'Licence Expiring Soon',
-      'numb': '8 hrs ago'
-
+      'numb': '8 hrs ago',
+      'close': '"fa-solid fa-xmark"'
     },
     {
+      'icon': '"fa-solid fa-file-lines"',
       'cond': 'Kelly Portfolio.pdf',
-      'numb': '670 kb'
+      'numb': '670 kb',
+      'close': '"fa-solid fa-xmark"'
     }
   ]
-
 }
 
+$(document).ready(() => {
+  openDropdown()
+  emailNotification()
+  bellNotification()
+});
+
+function openDropdown() {
+  $('.toggle-trigger').click((element) => {
+    console.log(element);
+    $(element.currentTarget).closest('.wrapper').find(element.currentTarget).toggleClass('active').focus();
+  })
+  $(window).click(el => {
+    console.log(el);
+    var $target = $(el.target)
+    if(!$target.closest('.toggle-trigger').length && $('.toggle-trigger').hasClass('active')){
+      $('.toggle-trigger').removeClass('active')
+    }
+  });
+}
 
 function emailNotification() {
   fields['email'].forEach(element => {
@@ -84,29 +64,15 @@ function emailNotification() {
     <h6>${element.name}</h6>
     <p>${element.status}</p>
     </div>
-    </a></li>`
+    </a></li> `
     $('#mail').append(html)
   })
 }
 
-
 function bellNotification() {
   fields['notification'].forEach(element => {
-    let noti = `<li><a href="#">
-     <div class='notify-lane'>
-      <h6>${element.cond}</h6>
-      <p>${element.numb}</p>
-      </div>
-      </a></li>`
+    let noti = `
+    `
     $('#notify').append(noti)
   })
 }
-
-
-
-$(document).ready(() => {
-  emailNotification()
-  bellNotification()
-  openDropdown()
-  //  toggle()
-});
