@@ -19,23 +19,8 @@ function setCharts() {
                 show: false
             },
             type: 'area',
-<<<<<<< Updated upstream
             height: '80%',
             width: '100%'
-=======
-            height: '85%',
-            width: '100%',
-            dropShadow: {
-                enabled: true,
-                opacity: 0.2,
-                blur: 10,
-                left: -7,
-                top: 22
-            },
-            zoom:{
-                enabled: false
-            }
->>>>>>> Stashed changes
         },
         dataLabels: {
             enabled: false
