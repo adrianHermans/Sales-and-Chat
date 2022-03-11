@@ -75,14 +75,14 @@ body {
 
 .wrapper .navbar .nav-right ul li .dropdown {
   position: absolute;
-  top: 3rem;
+  top: 2.8rem;
   right: -10px;
   background: var(--nav-bg);
   padding: 2px 8px;
   border-radius: 5px;
   display: none;
   font-size: 15px;
-
+  
 }
 
 .wrapper .navbar .nav-right ul li .dropdown ion-icon {
@@ -137,16 +137,15 @@ body {
 }
 /* NOTIFY */
 .dropdown #notify{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width: 15rem;
-  height: 12rem;
+  width: 14rem;
+  height: fit-content;
   color: var(--text);
+  padding: 0.5rem;
+
 }
 .dropdown #notify .icons{
   font-size: 23px;
+  padding-top: 20px;
 }
 .dropdown #notify h6 {
   font-size: 14px;
@@ -157,13 +156,26 @@ body {
 .dropdown #notify p{
   color: var(--light);
   font-size: 13px;
-
+  padding-left: 1rem;
 }
 
+.dropdown #notify .note{
+  padding-bottom: 15px;
+}
+.dropdown #notify .texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 10rem;
+}
+.espaco{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .dropdown #notify .fa-xmark{
   font-size: 19px;
   cursor: pointer;
- 
 }
 
 .dropdown #notify .fa-xmark:hover{
@@ -233,7 +245,19 @@ body {
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
 
+body::-webkit-scrollbar-track {
+  background: var(--top-side-bar-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--second-color-dark);
+  border-radius: 20px;
+  border: 2px solid var(--top-side-bar-dark);
+}
 
 /* Media Queries For Responsivness*/
 @media only screen and (max-height: 639px) {

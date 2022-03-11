@@ -72,10 +72,10 @@ function emailNotification() {
 function bellNotification() {
   fields['notification'].forEach(element => {
     let noti = `
-      <div id='note'>
-        <a href="#">
+      <div class='note'>
+        <a class='espaco' href="#">
           <div class='icons'><i class=${element.icon}> </i></div>
-          <div>
+          <div class='texts'>
             <div> <h6>${element.cond}</h6> </div>
             <div> <p>${element.numb}</p> </div>
           </div>
