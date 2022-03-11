@@ -1,4 +1,4 @@
-var fields = {
+var field = {
     "banners": [
         {
             "lane": "first",
@@ -84,7 +84,7 @@ $(document).ready(() => {
 });
 
 function setBanners() {
-    fields["banners"].forEach(element =>{
+    field["banners"].forEach(element =>{
         if(element.lane == "first"){
             let banner = `
             <div class="${element.idBanner} banner">
