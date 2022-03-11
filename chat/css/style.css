@@ -244,7 +244,7 @@ body {
 ::before {
   box-sizing: border-box;
 }
-
+/* SCROLLBAR */
 body::-webkit-scrollbar {
   width: 10px;
 }
