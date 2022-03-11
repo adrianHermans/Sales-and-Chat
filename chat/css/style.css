@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 /* Base */
 :root {
   --bg: #060818;
@@ -22,12 +23,22 @@ body {
   background: var(--bg);
 }
 
+.navInvisible {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--bg);
+}
+
 .wrapper {
   position: fixed;
   top: 2.1rem;
   left: 52.5%;
   transform: translate(-50%, -50%);
-
+  z-index: 99;
 }
 
 .wrapper .navbar {
@@ -82,7 +93,7 @@ body {
   border-radius: 5px;
   display: none;
   font-size: 15px;
-  
+
 }
 
 .wrapper .navbar .nav-right ul li .dropdown ion-icon {
@@ -104,7 +115,7 @@ body {
   background: var(--dropdowns);
 }
 
-.active{
+.active {
   display: block;
 }
 
@@ -126,7 +137,7 @@ body {
   justify-content: center;
   height: 1.5rem;
   width: 1.5rem;
-  
+
 }
 
 .nav-right .arrow {
@@ -135,60 +146,69 @@ body {
   width: 0.75rem;
   height: 0.75rem;
 }
+
 /* NOTIFY */
-.dropdown #notify{
+.dropdown #notify {
   width: 14rem;
   height: fit-content;
   color: var(--text);
   padding: 0.5rem;
 
 }
-.dropdown #notify .icons{
+
+.dropdown #notify .icons {
   font-size: 23px;
   padding-top: 20px;
 }
+
 .dropdown #notify h6 {
   font-size: 14px;
   padding-left: 1rem;
   padding-top: 1rem;
 }
 
-.dropdown #notify p{
+.dropdown #notify p {
   color: var(--light);
   font-size: 13px;
   padding-left: 1rem;
 }
 
-.dropdown #notify .note{
+.dropdown #notify .note {
   padding-bottom: 15px;
 }
-.dropdown #notify .texts{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 10rem;
+
+.dropdown #notify .texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 10rem;
 }
-.espaco{
+
+.espaco {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.dropdown #notify .fa-xmark{
+
+.dropdown #notify .fa-xmark {
   font-size: 19px;
   cursor: pointer;
 }
 
-.dropdown #notify .fa-xmark:hover{
+.dropdown #notify .fa-xmark:hover {
   color: rgb(255, 52, 52);
 }
-.dropdown #notify .fa-file-lines{
+
+.dropdown #notify .fa-file-lines {
   color: #d6656f;
   margin-left: 5px;
 }
-.dropdown #notify .fa-heart{
+
+.dropdown #notify .fa-heart {
   color: #e2a03f;
 }
-.dropdown #notify .fa-server{
+
+.dropdown #notify .fa-server {
   color: #009688;
 }
 
@@ -197,13 +217,16 @@ body {
   width: 12rem;
   height: 11.5rem;
 }
+
 .dropdown #mail li {
   padding-top: 0.5rem;
   margin-bottom: 10px;
 }
-.dropdown #mail h6{
+
+.dropdown #mail h6 {
   font-weight: 550;
 }
+
 .dropdown #profile {
   padding-left: 1px;
 }
@@ -267,6 +290,16 @@ body::-webkit-scrollbar-thumb {
     margin-left: 0;
     margin-top: 0;
 
+  }
+
+  .navInvisible {
+    height: 13vh;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .navInvisible {
+    height: 12vh;
   }
 }
 
