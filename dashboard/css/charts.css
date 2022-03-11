@@ -8,7 +8,23 @@
     max-width: 100%;
 }
 
+.bannerHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .apexcharts-tooltip {
     background-color: var(--background-tooltip-dark);
     color: var(--letter-tooltip);
+}
+
+#iconChart3{
+    height: 45px;
+    width: 45px;
+    margin: 1.1rem;
+}
+
+.chart3{
+    margin-top: 2rem;
 }

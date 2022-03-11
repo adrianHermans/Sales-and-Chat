@@ -17,6 +17,11 @@ var fields = {
         {
             "lane": "second",
             "name": "Daily sales",
+            "subTitle": "Go to columns for details.",
+            "hasSubTitle": true,
+            "hasIcon": true,
+            "icon": '<img src="../../img/dollar-symbol.png" id="iconChart3">',
+            "hasIcon": true,
             "hasTitle": true,
             "idBanner": "banner3",
             "idChart": "chart3"
@@ -91,7 +96,15 @@ function setBanners() {
         if(element.lane == "second"){
             let banner = `
             <div class="${element.idBanner} banner">
-                ${element.hasTitle ? `<div class="bannerTitle">${element.name}</div>` : ``}
+                <div class="bannerHead">
+                    ${element.hasTitle ? `<div class="bannerHeadText">
+                                            <div class="bannerTitle">${element.name}</div>
+                                            ${element.hasSubTitle ? `<div class="bannerSubTitle">${element.subTitle}</div>` : ``}
+                                          </div>` : ``}
+                    ${element.hasIcon ? `<div class="bannerHeadText ">
+                        ${element.hasIcon ? `<div class="bannerIcon">${element.icon}</div>` : ``}
+                    </div>` : ``}
+                </div>
                 <div class="${element.idChart} charts"></div>
             </div>`;
             $(".secondRow").append(banner)
