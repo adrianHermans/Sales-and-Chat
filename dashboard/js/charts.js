@@ -2,7 +2,7 @@ var colorsChartDark = {
     'letterChartDark': '#BFC9D4',
     'gridChartDark': '#181E37',
     'axisChartDark': '#6A7D8B',
-    'letterSubTitle':'#888EA8'
+    'letterSubTitle': '#888EA8'
 }
 
 function setCharts() {
@@ -17,7 +17,7 @@ function setCharts() {
         }],
         chart: {
             fontFamily: 'Nunito, sans-serif',
-            colors:colorsChartDark.letterChartDark,
+            colors: colorsChartDark.letterChartDark,
             toolbar: {
                 show: false
             },
@@ -31,7 +31,7 @@ function setCharts() {
                 left: -7,
                 top: 22
             },
-            zoom:{
+            zoom: {
                 enabled: false
             }
         },
@@ -59,11 +59,11 @@ function setCharts() {
             offsetY: 0,
             floating: false,
             style: {
-              fontSize: '18px',
-              color:  '#4361ee'
+                fontSize: '18px',
+                color: '#4361ee'
             }
-          },
-          title: {
+        },
+        title: {
             text: 'Total Profit',
             align: 'left',
             margin: 0,
@@ -71,10 +71,10 @@ function setCharts() {
             offsetY: 0,
             floating: false,
             style: {
-              fontSize: '18px',
-              color: colorsChartDark.letterSubTitle 
+                fontSize: '18px',
+                color: colorsChartDark.letterSubTitle
             },
-          },
+        },
         xaxis: {
             lines: {
                 show: false
@@ -144,12 +144,105 @@ function setCharts() {
         fill: {
             type: 'solid',
             opacity: 0.05
+        }
+    };
+
+    var options3 = {
+        colors: ['#E2A03F', '#E0E6ED'],
+        series: [{
+            name: 'Sales',
+            data: [44, 55, 41, 67, 22, 43, 21, 49]
+        }, {
+            name: 'Last Week',
+            data: [13, 23, 20, 8, 13, 27, 33, 12]
+        }],
+        chart: {
+            type: 'bar',
+            height: '50%',
+            // width: '100%',
+            stacked: true,
+            stackType: '100%',
+            toolbar: {
+                show: false
+            }
         },
-        
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                legend: {
+                    position: 'bottom',
+                    offsetX: -10,
+                    offsetY: 0
+                }
+            }
+        }],
+        xaxis: {
+            categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+            lines: {
+                show: false
+            },
+            axisBorder: {
+                show: false
+            },
+            axisTicks: {
+                show: false
+            },
+            labels: {
+                show: false
+            }
+        },
+        yaxis: {
+            lines: {
+                show: false
+            },
+            axisBorder: {
+                show: false
+            },
+            axisTicks: {
+                show: false
+            },
+            labels: {
+                show: false
+            }
+        },
+        fill: {
+            opacity: 1
+        },
+        legend: {
+            show: false
+        },
+        grid: {
+            strokeDashArray: 4,
+            show: false,
+            xaxis: {
+                lines: {
+                    show: false
+                }
+            },
+            yaxis: {
+                lines: {
+                    show: false
+                }
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        tooltip: {
+            theme: 'dark'
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '35%'
+            }
+        }
     }
 
-    var chart = new ApexCharts(document.querySelector(".chart1"), options1);
+    var chart1 = new ApexCharts(document.querySelector(".chart1"), options1);
+    var chart3 = new ApexCharts(document.querySelector(".chart3"), options3);
 
-    chart.render();
+    chart1.render();
+    chart3.render();
 
 }

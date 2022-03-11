@@ -38,7 +38,7 @@
 }
 
 .secondRow {
-    height: 25rem;
+    height: 22rem;
 }
 
 .thirdRow {
@@ -56,7 +56,15 @@
 
 .bannerTitle {
     height: fit-content;
-    margin: 1.1rem;
+    margin: 1.1rem 0 0 1.1rem;
+}
+
+.bannerSubTitle {
+    height: fit-content;
+    margin-left: 1.1rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--second-color-dark);
 }
 
 body::-webkit-scrollbar {
