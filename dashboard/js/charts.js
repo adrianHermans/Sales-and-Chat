@@ -147,6 +147,65 @@ function setCharts() {
         }
     };
 
+    var options2 = {
+        series: [985, 737, 270],
+        labels: ['Apparel', 'Sports', 'Others'],
+        fontFamily: 'Nunito',
+        dataLabels: {
+            enabled: false,
+        },
+        stroke: {
+            show: true,
+            colors: '#0E1726',
+            width: 15,
+        },
+        plotOptions: {
+            pie: {
+                customScale: 1.0,
+                donut: {
+                    size: '70%',
+                    labels: {
+                        show: true,
+                        total: {
+                            show: true,
+                            showAlways: false,
+                            color: '#688EA8',
+                            fontSize: '30',
+                            fontFamily: 'Nunito',
+                        },
+                        value: {
+                            color: '#BFC9D4',
+                            fontSize: '26',
+                            fontFamily: 'Nunito'
+                        },
+                    }
+                }
+            }
+        },
+        chart: {
+            type: 'donut',
+            height:'80%'
+        },
+        colors: ['#5C1AC3', '#E2A03F', '#E7515A'],
+        legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            fontSize: 14,
+
+            labels: {
+                colors: colorsChartDark.letterChartDark,
+            }
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+            },
+        }]
+    };
+
     var options3 = {
         colors: ['#E2A03F', '#E0E6ED'],
         series: [{
@@ -240,9 +299,13 @@ function setCharts() {
     }
 
     var chart1 = new ApexCharts(document.querySelector(".chart1"), options1);
+    var chart2 = new ApexCharts(document.querySelector(".chart2"), options2);
     var chart3 = new ApexCharts(document.querySelector(".chart3"), options3);
 
+
+
     chart1.render();
+    chart2.render();
     chart3.render();
 
 }
