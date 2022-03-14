@@ -6,6 +6,7 @@
 .charts {
     height: 100%;
     max-width: 100%;
+    min-height: 90%;
 }
 
 .bannerHead{
@@ -23,6 +24,13 @@
     height: 45px;
     width: 45px;
     margin: 1.1rem;
+}
+.chart2{
+    padding-top: 20px;
+    height:100%;
+
+}
+.chart2:hover{
 }
 
 .chart3{
